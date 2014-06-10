@@ -68,7 +68,9 @@ module PDF
       cb = @stamp.getOverContent(img_field[0].to_i)
       cb.addImage(img)
     end
-    
+    def fields
+     @form.getFields
+    end
     # PDF::Stamper allows setting metadata on the created PDF by passing
     # the parameters to the set_more_info function. Our implementation here
     # is slightly different from iText, in that we only receive a single key/value
